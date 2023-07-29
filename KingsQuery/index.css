@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #ecedf2;
+}
+
+.container {
+  width: 1140px;
+  margin: 1em auto;
+}
+
+.search {
+  height: 100px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.types {
+  flex: 1 0 auto;
+}
+
+.search .title {
+  width: 80px;
+  background-color: #5488d5;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px 0 0 10px;
+}
+
+.search .types {
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.type-list {
+  display: flex;
+  padding-left: 20px;
+  color: #666;
+}
+
+.type-list .radio {
+  position: relative;
+  margin-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.type-list .radio::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.radio::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #5488d5;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.radio.checked::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #5488d5;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.keyword {
+  background-color: #fff;
+  padding-right: 30px;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  border-radius: 5px;
+  padding-right: 30px;
+  position: relative;
+}
+
+input {
+  height: 100%;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 12px;
+}
+
+.input::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: url(./search_icon.png) no-repeat center;
+  border-left: 1px solid #ccc;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.list {
+  display: grid;
+  /* 10列 每列1个元素 */
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: center;
+  text-align: center;
+  font-size: 14px;
+  row-gap: 20px;
+  color: #333;
+}
+
+.list img {
+  width: 77px;
+  height: 77px;
+  display: block;
+  margin-bottom: 5px;
+  border: 2px solid #5488d5;
+  border-radius: 10px 0 10px 0;
+}
