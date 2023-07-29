@@ -1,0 +1,40 @@
+* {
+/* 消耗性能，正式项目不建议这样样式初始化 */
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  background-color: #fae089;
+  display: flex;
+  padding: 20px ;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "黑体";
+}
+
+.left {
+  padding-right: 20px;
+  border-right: 2px solid #fff;
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding-left: 20px;
+  height: 20px;
+  color: rgb(39, 39, 39);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* overflow: hidden; */
+}
+
+.list li {
+  height: 20px;
+  line-height: 20px;
+}
